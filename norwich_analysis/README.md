@@ -1,6 +1,6 @@
-# 🧠 Football Analytics Projects
+# 🧠 Norwich Analysis
 
-An ongoing collection of data-driven football analysis projects exploring performance trends, player scouting, and team modelling. This work blends expected goals (xG), rolling trends, radar plots, and match simulations using Python and Matplotlib.
+An ongoing collection of data-driven Noriwch analysis projects exploring performance trends and team modelling. This work blends expected goals (xG), rolling trends, radar plots, and match simulations using Python and Matplotlib.
 
 ---
 

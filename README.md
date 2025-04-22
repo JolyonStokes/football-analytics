@@ -9,7 +9,7 @@ Each folder represents an independent analysis, using modern data science practi
 ## 📁 Project Index
 
 ### 🔴 Bayer Leverkusen – 2023/24 xPts Model
-📂 [`/leverkusen_xpts`](./leverkusen_xpts)
+📂 [`/leverkusen_analysis`](./leverkusen_analysis)
 
 A match-by-match **expected points (xPts)** model using **Monte Carlo simulation** based on StatsBomb's open event data for Bayer Leverkusen's 2023/24 Bundesliga season.
 

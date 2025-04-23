@@ -98,8 +98,6 @@ def get_season_fixture_links(season):
     return matches
 
 
-
-# ✅ Example test:
 if __name__ == "__main__":
     season = "2023-2024"
     fixtures = get_season_fixture_links(season)

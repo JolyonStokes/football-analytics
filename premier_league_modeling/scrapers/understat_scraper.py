@@ -7,7 +7,7 @@ import requests
 import json
 import re
 from bs4 import BeautifulSoup
-from config import SEASONS, UNDERSTAT_URL_TEMPLATE
+from config import UNDERSTAT_SEASONS, UNDERSTAT_URL_TEMPLATE
 from utils import get_db_engine
 from database.load_data import insert_new_matches
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         )
         existing_ids = set(row[0] for row in existing_ids)
 
-    for season in SEASONS:
+    for season in UNDERSTAT_SEASONS:
         matches = scrape_understat_season(season)
         insert_new_matches(matches, existing_ids, engine, season)
         print(f"✅ Completed season {season}.")

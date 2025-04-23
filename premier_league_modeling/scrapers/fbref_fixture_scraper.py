@@ -6,8 +6,7 @@ from bs4 import BeautifulSoup, Comment
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-BASE_URL = "https://fbref.com"
-SCHEDULE_URL_TEMPLATE = "https://fbref.com/en/comps/9/{season}/schedule/{season}-Premier-League-Scores-and-Fixtures"
+from config import FBREF_BASE_URL, FBREF_SCHEDULE_URL_TEMPLATE
 
 def get_rendered_html(url, wait_time=15):
     options = Options()
@@ -51,7 +50,7 @@ def get_fixture_table_from_comments(soup):
 
 
 def get_season_fixture_links(season):
-    url = SCHEDULE_URL_TEMPLATE.format(season=season)
+    url = FBREF_SCHEDULE_URL_TEMPLATE.format(season=season)
     print(f"📅 Scraping fixture list for season {season}: {url}")
 
     html = get_rendered_html(url)
@@ -86,7 +85,7 @@ def get_season_fixture_links(season):
         if match_link_cell:
             match_link_tag = match_link_cell.find('a')
             if match_link_tag:
-                match_url = BASE_URL + match_link_tag['href']
+                match_url = FBREF_BASE_URL + match_link_tag['href']
 
         matches.append({
             'date': date,

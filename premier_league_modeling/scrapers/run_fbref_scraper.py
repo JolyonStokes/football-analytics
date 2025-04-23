@@ -6,14 +6,7 @@ from fbref_scraper import parse_match_stats
 from database.load_team_stats import insert_team_stats
 from utils import get_db_engine
 import pandas as pd
-
-SEASONS = [
-    "2020-2021",
-    "2021-2022",
-    "2022-2023",
-    "2023-2024",
-    "2024-2025"
-]
+from config import FBREF_SEASONS
 
 # Function to check if a match already exists in the 'matches' table
 def get_existing_match_ids(engine):
@@ -23,7 +16,7 @@ def get_existing_match_ids(engine):
 
 def run_full_scrape():
     engine = get_db_engine()
-    for season in SEASONS:
+    for season in FBREF_SEASONS:
         print(f"\n📅 Starting scrape for season: {season}")
         fixture_list = get_season_fixture_links(season)
         scraped_matches = get_existing_match_ids(engine)

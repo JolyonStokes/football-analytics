@@ -10,9 +10,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import time
-from database.load_team_stats import insert_team_stats
-from scrapers.fbref_fixture_scraper import get_season_fixture_links
 
 def get_rendered_match_html(url, wait_time=10):
     options = Options()
@@ -36,7 +33,6 @@ def get_rendered_match_html(url, wait_time=10):
     return page_source
 
 def parse_team_stats_extra(soup):
-    extra_stats = {}
     extra_block = soup.find('div', id='team_stats_extra')
     if not extra_block:
         print("⚠️ Could not find 'team_stats_extra' section.")

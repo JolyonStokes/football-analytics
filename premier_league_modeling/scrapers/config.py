@@ -1,6 +1,8 @@
-SEASONS = ['2020', '2021', '2022', '2023', '2024']
+UNDERSTAT_SEASONS = ['2020', '2021', '2022', '2023', '2024']
 LEAGUE = 'EPL'  # Premier League
 UNDERSTAT_URL_TEMPLATE = f"https://understat.com/league/{LEAGUE}/{{season}}"
+FBREF_BASE_URL = "https://fbref.com"
+FBREF_SCHEDULE_URL_TEMPLATE = "https://fbref.com/en/comps/9/{season}/schedule/{season}-Premier-League-Scores-and-Fixtures"
 TEAM_NAME_MAPPING = {
     "Manchester United": "Man United",
     "Manchester City": "Man City",

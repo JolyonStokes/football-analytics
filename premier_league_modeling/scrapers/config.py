@@ -1,4 +1,5 @@
 UNDERSTAT_SEASONS = ['2020', '2021', '2022', '2023', '2024']
+FBREF_SEASONS = ['2020-2021', '2021-2022', '2022-2023', '2023-2024', '2024-2025']
 LEAGUE = 'EPL'  # Premier League
 UNDERSTAT_URL_TEMPLATE = f"https://understat.com/league/{LEAGUE}/{{season}}"
 FBREF_BASE_URL = "https://fbref.com"
